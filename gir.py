@@ -10,7 +10,7 @@ MENTION_REGEX = "^<@(|[WU].+?)>(.*)"
 
 
 def parse_bot_commands(commands):
-    pass
+    print(commands)
 
 
 def handle_command(command, channel):
