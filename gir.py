@@ -26,3 +26,5 @@ if __name__ == '__main__':
             if command:
                 handle_command(command, channel)
             time.sleep(RTM_READ_DELAY)
+        else:
+            print("Connection failed")
