@@ -28,7 +28,7 @@ def write_db(db):
         json.dump(db, officers)
 
 
-# Event Handlers
+# Commands
 @app.route('/gir', methods=['POST'])
 def gir():
     try:
