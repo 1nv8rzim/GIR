@@ -31,10 +31,19 @@ def write_db(db):
 # Event Handlers
 @app.route('/gir', methods=['POST'])
 def gir():
-    data = request.form
-    text = data.get('text')
-    user_id = data.get('user_id')
-    print(data)
+    try:
+        data = request.form
+        text = data.get('text')
+        user_id = data.get('user_id')
+        user_name = data.get('user_name')
+        name, officer = text.split()
+        db = get_db()
+        db.update(
+            {user_id: {'name': name, 'user_name': user_name, 'officer': officer}})
+        write_db(db)
+        client.chat_postMessage(text='Hi @{name}!', channel='#{user_name}')
+    except Exception as e:
+        print(e.with_traceback(None))
     return Response(), 200
 
 
