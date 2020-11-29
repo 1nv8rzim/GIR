@@ -38,8 +38,12 @@ def gir():
         user_id = data.get('user_id')
         channel = data.get('channel_id')
         user_name = data.get('user_name')
-        name, officer = text.split(' ', 1)
-        officer = officer.split()
+        try:
+            name, officer = text.split(' ', 1)
+            officer = officer.split(', ')
+            officer = officer if len(officer) > 1 else officer[0]
+        except:
+            name, officer = text, None
         db = get_db()
         db.update(
             {user_id: {'name': name, 'user_name': user_name, 'officer': officer, 'channel': channel}})
