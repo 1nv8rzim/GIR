@@ -79,6 +79,21 @@ def anonymous():
     pass
 
 
+@app.route('/event', methods=['POST'])
+def _event():
+    pass
+
+
+@app.route('/report', methods=['POST'])
+def report():
+    pass
+
+
+@app.route('/eboard', methods=['POST'])
+def eboard():
+    pass
+
+
 # Run Web App
 if __name__ == '__main__':
     app.run(debug=True)
