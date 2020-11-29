@@ -33,7 +33,6 @@ def write_db(db):
 def gir():
     try:
         data = request.form
-        print(data)
         text = data.get('text')
         user_id = data.get('user_id')
         channel = data.get('channel_id')
