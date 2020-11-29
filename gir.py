@@ -56,41 +56,49 @@ def gir():
 
 @app.route('/excuse', methods=['POST'])
 def excuse():
+    data = request.form
     pass
 
 
 @app.route('/loose-ends', methods=['POST'])
 def loose_ends():
+    data = request.form
     pass
 
 
 @app.route('/new-business', methods=['POST'])
 def new_business():
+    data = request.form
     pass
 
 
 @app.route('/jboard', methods=['POST'])
 def jboard():
+    data = request.form
     pass
 
 
 @app.route('/anonymous', methods=['POST'])
 def anonymous():
+    data = request.form
     pass
 
 
 @app.route('/event', methods=['POST'])
 def _event():
+    data = request.form
     pass
 
 
 @app.route('/report', methods=['POST'])
 def report():
+    data = request.form
     pass
 
 
 @app.route('/eboard', methods=['POST'])
 def eboard():
+    data = request.form
     pass
 
 
