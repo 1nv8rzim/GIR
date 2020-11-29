@@ -33,17 +33,21 @@ def write_db(db):
 def gir():
     try:
         data = request.form
+        print(data)
         text = data.get('text')
         user_id = data.get('user_id')
+        channel = data.get('channel_id')
         user_name = data.get('user_name')
-        name, officer = text.split()
+        name, officer = text.split(' ', 1)
+        officer = officer.split()
         db = get_db()
         db.update(
-            {user_id: {'name': name, 'user_name': user_name, 'officer': officer}})
+            {user_id: {'name': name, 'user_name': user_name, 'officer': officer, 'channel': channel}})
         write_db(db)
-        client.chat_postMessage(text='Hi @{name}!', channel='#{user_name}')
-    except Exception as e:
-        print(e.with_traceback(None))
+        client.chat_postMessage(
+            text=f'Hi {name}!\n\nYou have been updated to in the database to have name={name}, officer={officer}, and user_name={user_name}', channel=channel)
+    except:
+        pass
     return Response(), 200
 
 
