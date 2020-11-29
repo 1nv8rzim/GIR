@@ -50,8 +50,33 @@ def gir():
         client.chat_postMessage(
             text=f'Hi {name}!\n\nYou have been updated to in the database to have name={name}, officer={officer}, and user_name={user_name}', channel=channel)
     except:
-        pass
+        return Response(), 400
     return Response(), 200
+
+
+@app.route('/excuse', methods=['POST'])
+def excuse():
+    pass
+
+
+@app.route('/loose-ends', methods=['POST'])
+def loose_ends():
+    pass
+
+
+@app.route('/new-business', methods=['POST'])
+def new_business():
+    pass
+
+
+@app.route('/jboard', methods=['POST'])
+def jboard():
+    pass
+
+
+@app.route('/anonymous', methods=['POST'])
+def anonymous():
+    pass
 
 
 # Run Web App
