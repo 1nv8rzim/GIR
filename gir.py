@@ -13,7 +13,7 @@ client = slack.WebClient(token=OAUTH_TOKEN)
 
 # Global Variables
 BOT_ID = client.api_call('auth.test')['user_id']
-OFFICERS = 'officers.json'
+OFFICERS = 'data/officers.json'
 
 # Functions
 
