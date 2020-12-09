@@ -6,7 +6,8 @@ import json
 
 # Intializing Flask Web App
 app = Flask(__name__)
-slack_event_adapter = SlackEventAdapter(SIGNING_SECRET, '/slack/events', app)
+slack_event_adapter = SlackEventAdapter(
+    SIGNING_SECRET, '/slack/events', app)
 
 # Initializing Slack Web Client
 client = slack.WebClient(token=OAUTH_TOKEN)
@@ -14,6 +15,7 @@ client = slack.WebClient(token=OAUTH_TOKEN)
 # Global Variables
 BOT_ID = client.api_call('auth.test')['user_id']
 OFFICERS = 'data/officers.json'
+REPORTS = 'data/officers.json'
 
 # Functions
 
@@ -27,8 +29,9 @@ def write_db(db):
     with open(OFFICERS, 'w') as officers:
         json.dump(db, officers)
 
+    # Commands
 
-# Commands
+
 @app.route('/gir', methods=['POST'])
 def gir():
     try:
