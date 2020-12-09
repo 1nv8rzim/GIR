@@ -1,1 +1,14 @@
-{"U01FVL4F4UC": {"name": "Zim", "user_name": "msf9542", "officer": "Recorder", "channel": "D01G25A1AE5"}}
+{
+    "U01FVL4F4UC": {
+        "name": "Zim",
+        "user_name": "msf9542",
+        "officer": "Recorder",
+        "channel": "D01G25A1AE5"
+    },
+    "U01G1EHGSNT": {
+        "name": "Recorder",
+        "user_name": "maxfusco627",
+        "officer": "Zim",
+        "channel": "D01GD4AJNER"
+    }
+}
