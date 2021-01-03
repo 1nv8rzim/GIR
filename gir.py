@@ -4,6 +4,11 @@ from private.information import OAUTH_TOKEN, SIGNING_SECRET
 from slackeventsapi import SlackEventAdapter
 import json
 
+"""
+GIR.py
+Slack Bot for Recorder
+"""
+
 # Intializing Flask Web App
 app = Flask(__name__)
 slack_event_adapter = SlackEventAdapter(
